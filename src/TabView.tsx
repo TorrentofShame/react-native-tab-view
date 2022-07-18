@@ -35,6 +35,7 @@ export type Props<T extends Route> = PagerProps & {
 
 export default function TabView<T extends Route>({
   onIndexChange,
+  orientation,
   navigationState,
   renderScene,
   initialLayout,
@@ -77,6 +78,7 @@ export default function TabView<T extends Route>({
   return (
     <View onLayout={handleLayout} style={[styles.pager, style]}>
       <Pager
+        orientation={orientation}
         layout={layout}
         navigationState={navigationState}
         keyboardDismissMode={keyboardDismissMode}

@@ -40,6 +40,7 @@ export default function PagerViewAdapter<T extends Route>({
   onSwipeStart,
   onSwipeEnd,
   children,
+  orientation,
   style,
   ...rest
 }: Props<T>) {
@@ -146,6 +147,7 @@ export default function PagerViewAdapter<T extends Route>({
         }}
         onPageScrollStateChanged={onPageScrollStateChanged}
         scrollEnabled={swipeEnabled}
+        orientation={orientation}
       >
         {children}
       </AnimatedViewPager>
